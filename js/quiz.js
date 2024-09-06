@@ -39,6 +39,7 @@ function restart() {
     start.style.display = "block";
     quiz.style.display = "none";
     scoreDiv.style.display = "none";
+    progress.innerHTML = "";
 }
 
 // render a question
