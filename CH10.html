@@ -29,6 +29,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/quiz.css">
 </head>
 
 <body>
@@ -129,6 +131,32 @@
 		<div class="video-container">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/2TELO5ljDJg?si=IYAzoNk7CFzmoCNJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		</div>
+
+		<!-- Quiz Start -->
+        <script>
+            const questions = [
+                {
+                    question : "What type is 3?",
+                    choices: [
+                        {text: "int", correct: true},
+                        {text: "float", correct: false},
+                        {text: "理想型", correct: false}
+                    ],
+                    imgSrc : "img/html.png",
+                },
+                {
+                    question : "What type is 3.5?",
+                    choices: [
+                        {text: "int", correct: false},
+                        {text: "float", correct: true},
+                    ],
+                    imgSrc : "img/js.png",
+                }
+            ];
+        </script>
+        <div id="quiz-container"></div>
+        <script src="js/quiz.js"></script>
+        <!-- Quiz End -->
 
   		<div id="disqus_thread"></div>
 		<script>
