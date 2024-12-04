@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "question": "讓小明有五顆糖",
+            "choices": [
+                {"text": "=", "correct": true},
+                {"text": "==", "correct": false}
+            ]
+        },
+        {
+            "question": "小花跟小美的年紀一樣",
+            "choices": [
+                {"text": "=", "correct": false},
+                {"text": "==", "correct": true}
+            ]
+        },
+        {
+            "question": "我的蘋果跟你的蘋果一樣多",
+            "choices": [
+                {"text": "=", "correct": false},
+                {"text": "==", "correct": true}
+            ]
+        },
+        {
+            "question": "你的書包跟我的書包顏色一樣",
+            "choices": [
+                {"text": "=", "correct": false},
+                {"text": "==", "correct": true}
+            ]
+        },
+        {
+            "question": "讓小辰是四歲",
+            "choices": [
+                {"text": "=", "correct": true},
+                {"text": "==", "correct": false}
+            ]
+        },
+        {
+            "question": "我們摘得花瓣一樣多",
+            "choices": [
+                {"text": "=", "correct": false},
+                {"text": "==", "correct": true}
+            ]
+        },
+        {
+            "question": "讓爸爸有四台車",
+            "choices": [
+                {"text": "=", "correct": true},
+                {"text": "==", "correct": false}
+            ]
+        },
+        {
+            "question": "小希跟小雲考的分數一樣",
+            "choices": [
+                {"text": "=", "correct": false},
+                {"text": "==", "correct": true}
+            ]
+        },
+        {
+            "question": "讓我有一百元",
+            "choices": [
+                {"text": "=", "correct": true},
+                {"text": "==", "correct": false}
+            ]
+        },
+        {
+            "question": "讓天空變成藍色",
+            "choices": [
+                {"text": "=", "correct": true},
+                {"text": "==", "correct": false}
+            ]
+        }
+    ]
+}

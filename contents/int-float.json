@@ -1,0 +1,74 @@
+{"data":
+[
+    {
+        "question" : "4是哪一種?",
+        "choices": [
+            {"text": "int", "correct": true},
+            {"text": "float", "correct": false}
+        ]
+    },
+    {
+        "question" : "3.5是哪一種?",
+        "choices": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": true}
+        ]
+},
+{
+        "question" : "20是哪一種?",
+        "choices": [
+            {"text": "int", "correct": true},
+            {"text": "float", "correct": false}
+        ]
+    },
+{
+        "question" : "205是哪一種?",
+        "choices": [
+            {"text": "int", "correct": true},
+            {"text": "float", "correct": false}
+        ]
+    },
+{
+        "question" : "2.58是哪一種?",
+        "choices": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": true}
+        ]
+},
+{
+        "question" : "3.14是哪一種?",
+        "choices": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": true}
+        ]
+},
+{
+        "question" : "100是哪一種?",
+        "choices": [
+            {"text": "int", "correct": true},
+            {"text": "float", "correct": false}
+        ]
+    },
+{
+        "question" : "1.0是哪一種?",
+        "choices": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": true}
+        ]
+},
+{
+        "question" : "80是哪一種?",
+        "choices": [
+            {"text": "int", "correct": true},
+            {"text": "float", "correct": false}
+        ]
+    },
+{
+        "question" : "5.07是哪一種?",
+        "choices": [
+            {"text": "int", "correct": false},
+            {"text": "float", "correct": true}
+        ]
+}
+]
+}

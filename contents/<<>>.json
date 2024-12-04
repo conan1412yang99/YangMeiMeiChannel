@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "question": "cin  “我叫王大同”",
+            "choices": [
+                {"text": ">>", "correct": true},
+                {"text": "<<", "correct": false}
+            ]
+        },
+        {
+            "question": "cout  “請填入生日”",
+            "choices": [
+                {"text": "<<", "correct": true},
+                {"text": ">>", "correct": false}
+            ]
+        },
+        {
+            "question": "cin  “我今天非常開心”",
+            "choices": [
+                {"text": ">>", "correct": true},
+                {"text": "<<", "correct": false}
+            ]
+        },
+        {
+            "question": "cout  “請問1+1是多少”",
+            "choices": [
+                {"text": "<<", "correct": true},
+                {"text": ">>", "correct": false}
+            ]
+        },
+        {
+            "question": "cin  “我最喜歡柯南”",
+            "choices": [
+                {"text": ">>", "correct": true},
+                {"text": "<<", "correct": false}
+            ]
+        },
+        {
+            "question": "cout  “你最喜歡的動畫是甚麼?”",
+            "choices": [
+                {"text": "<<", "correct": true},
+                {"text": ">>", "correct": false}
+            ]
+        },
+        {
+            "question": "cin  “今天晚餐是炒飯”",
+            "choices": [
+                {"text": ">>", "correct": true},
+                {"text": "<<", "correct": false}
+            ]
+        },
+        {
+            "question": "cin  “明天早上8點起床”",
+            "choices": [
+                {"text": ">>", "correct": true},
+                {"text": "<<", "correct": false}
+            ]
+        },
+        {
+            "question": "cout  “請問你有帶雨傘嗎?”",
+            "choices": [
+                {"text": "<<", "correct": true},
+                {"text": ">>", "correct": false}
+            ]
+        },
+        {
+            "question": "cin  “我沒有零錢”",
+            "choices": [
+                {"text": ">>", "correct": true},
+                {"text": "<<", "correct": false}
+            ]
+        }
+    ]
+}

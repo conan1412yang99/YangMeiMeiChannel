@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "question": "電腦說:「你叫甚麼名字?」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        },
+        {
+            "question": "我說:「我愛媽媽」",
+            "choices": [
+                {"text": "cin", "correct": true},
+                {"text": "cout", "correct": false}
+            ]
+        },
+        {
+            "question": "電腦說:「你今年幾歲?」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        },
+        {
+            "question": "電腦說:「你住在哪個城市?」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        },
+        {
+            "question": "我說:「台北市」",
+            "choices": [
+                {"text": "cin", "correct": true},
+                {"text": "cout", "correct": false}
+            ]
+        },
+        {
+            "question": "電腦說:「我今天很開心」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        },
+        {
+            "question": "電腦說:「請給我三顆球」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        },
+        {
+            "question": "我說:「我弟弟今年三歲」",
+            "choices": [
+                {"text": "cin", "correct": true},
+                {"text": "cout", "correct": false}
+            ]
+        },
+        {
+            "question": "電腦說:「今天是晴天嗎?」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        },
+        {
+            "question": "電腦說:「請填你爸爸的名字」",
+            "choices": [
+                {"text": "cout", "correct": true},
+                {"text": "cin", "correct": false}
+            ]
+        }
+    ]
+}

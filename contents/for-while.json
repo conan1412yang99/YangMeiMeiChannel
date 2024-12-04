@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "question": "有10本書，你要一一翻過去看裡面有什麼，不用找到什麼東西也沒關係，這應該用？",
+            "choices": [
+                {"text": "For", "correct": true},
+                {"text": "While", "correct": false}
+            ]
+        },
+        {
+            "question": "你要在10分鐘內找到掉在地板上的一支筆，找不到就算失敗，這應該用？",
+            "choices": [
+                {"text": "For", "correct": false},
+                {"text": "While", "correct": true}
+            ]
+        },
+        {
+            "question": "小明有一排玩具車，從1號玩到10號，每輛都試著開一下，這應該用？",
+            "choices": [
+                {"text": "For", "correct": true},
+                {"text": "While", "correct": false}
+            ]
+        },
+        {
+            "question": "小明在房間裡找他的球，只要找到一顆就可以停下來，這應該用？",
+            "choices": [
+                {"text": "For", "correct": false},
+                {"text": "While", "correct": true}
+            ]
+        },
+        {
+            "question": "有20個蘋果，小紅一個一個檢查是不是壞掉了，不管檢查完結果如何，這應該用？",
+            "choices": [
+                {"text": "For", "correct": true},
+                {"text": "While", "correct": false}
+            ]
+        },
+        {
+            "question": "小狗在草地上找骨頭，只要找到一根就停下來，找不到就失敗，這應該用？",
+            "choices": [
+                {"text": "For", "correct": false},
+                {"text": "While", "correct": true}
+            ]
+        },
+        {
+            "question": "小明有10支彩色筆，每支都畫一條線看看顏色，這應該用？",
+            "choices": [
+                {"text": "For", "correct": true},
+                {"text": "While", "correct": false}
+            ]
+        },
+        {
+            "question": "媽媽讓小紅找一把湯匙，只要找到一把就可以停下來，這應該用？",
+            "choices": [
+                {"text": "For", "correct": false},
+                {"text": "While", "correct": true}
+            ]
+        },
+        {
+            "question": "你想試穿衣櫃裡的所有衣服，每件都穿過一次就可以了，這應該用？",
+            "choices": [
+                {"text": "For", "correct": true},
+                {"text": "While", "correct": false}
+            ]
+        },
+        {
+            "question": "你要在5分鐘內找到書包裡的鉛筆，沒找到就遲到，這應該用？",
+            "choices": [
+                {"text": "For", "correct": false},
+                {"text": "While", "correct": true}
+            ]
+        }
+    ]
+}
