@@ -96,68 +96,39 @@
             </div>
         </div>
         <!-- Page Header End -->
+        <style>
+            .video-container {
+                position: relative;
+                width: 70%; /* 調整 container 的寬度 */
+                margin: 0 auto; /* 讓 container 水平置中 */
+                padding-bottom: 39.375%; /* 調整 16:9 aspect ratio，這裡使用 16:9 的 70% 比例 */
+                overflow: hidden;
+            }
 
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
 
-        <!-- Classes Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">讓蘋果變成香蕉?!</h1>
-                    <p>教學主題: =</p>
-                </div>
-            </div>
-        </div>
-        <!-- Classes End -->
-<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			.video-container {
-				position: relative;
-				width: 70%; /* 調整 container 的寬度 */
-				margin: 0 auto; /* 讓 container 水平置中 */
-				padding-bottom: 39.375%; /* 調整 16:9 aspect ratio，這裡使用 16:9 的 70% 比例 */
-				overflow: hidden;
-			}
-
-			.video-container iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-		</style>
-
-		<div class="video-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/2TELO5ljDJg?si=IYAzoNk7CFzmoCNJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</div>
-
-		<!-- Quiz Start -->
-        <script>
-            const questions = [
-                {
-                    question : "爸爸想要把牆壁變成藍色的，需要使用...?",
-                    choices: [
-                        {text: "=", correct: true},
-                        {text: "==", correct: false},
-                    ],
-                    imgSrc : "img/html.png",
-                },
-                {
-                    question : "小明有五顆糖果，小花有五顆糖果，他們想知道自己的糖果跟對方的是不是一樣多，需要使用...?",
-                    choices: [
-                        {text: "=", correct: false},
-                        {text: "==", correct: true},
-                    ],
-                    imgSrc : "img/js.png",
-                }
-            ];
+        <!-- Content Start -->
+        <div id="imported-section"></div>
+        <script src="js/content.js"></script>
+        <script> 
+            let questions = [];
+            const chapter = 7;
+            fetch_content(chapter);
         </script>
         <div id="quiz-container"></div>
         <script src="js/quiz.js"></script>
-        <!-- Quiz End -->
-		
-		<div id="disqus_thread"></div>
+        <script>  fetch_quiz(chapter) </script>
+        <!-- Content End -->
+
+
+        <div id="disqus_thread"></div>
 		<script>
 			/**
 			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

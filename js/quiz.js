@@ -1,6 +1,6 @@
 const container = document.getElementById("quiz-container");
 container.innerHTML = `
-<div id="start">開始玩爛遊戲<br/>!</div>
+<div id="start">開始玩遊戲<br/>!</div>
 <div id="quiz" style="display: none">
     <div id="question"></div>
     <div id="qImg"></div>
@@ -23,7 +23,7 @@ const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
-const lastQuestion = questions.length - 1;
+let lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 0;
 const questionTime = 10; // 10s
@@ -49,7 +49,7 @@ function renderQuestion(){
     if (q.imgSrc) {
         qImg.innerHTML = "<img src="+ q.imgSrc +">";
     } else {
-        qImg.innerHTML = "";
+        qImg.innerHTML = "<img src='img/cpp.png'>";
     }
     let choicesHtml = "";
     if (q.choices){
@@ -60,9 +60,10 @@ function renderQuestion(){
     choices.innerHTML = choicesHtml;
 }
 
-start.addEventListener("click",startQuiz);
+// start.addEventListener("click",startQuiz);
 
 function startQuiz(){
+    lastQuestion = questions.length - 1;
     start.style.display = "none";
     renderQuestion();
     quiz.style.display = "block";

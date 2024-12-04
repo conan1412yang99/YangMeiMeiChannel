@@ -28,7 +28,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">	
+    <link href="css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/quiz.css">
 </head>
@@ -96,69 +96,39 @@
             </div>
         </div>
         <!-- Page Header End -->
+        <style>
+            .video-container {
+                position: relative;
+                width: 70%; /* 調整 container 的寬度 */
+                margin: 0 auto; /* 讓 container 水平置中 */
+                padding-bottom: 39.375%; /* 調整 16:9 aspect ratio，這裡使用 16:9 的 70% 比例 */
+                overflow: hidden;
+            }
 
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
 
-        <!-- Classes Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">什麼是整數?</h1>
-                    <p>教學主題: int, float</p>
-                </div>
-            </div>
-        </div>
-        <!-- Classes End -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			.video-container {
-				position: relative;
-				width: 70%; /* 調整 container 的寬度 */
-				margin: 0 auto; /* 讓 container 水平置中 */
-				padding-bottom: 39.375%; /* 調整 16:9 aspect ratio，這裡使用 16:9 的 70% 比例 */
-				overflow: hidden;
-			}
-
-			.video-container iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-		</style>
-
-		<div class="video-container">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/2TELO5ljDJg?si=IYAzoNk7CFzmoCNJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</div>
-
-        <!-- Quiz Start -->
-        <script>
-            const questions = [
-                {
-                    question : "What type is 3?",
-                    choices: [
-                        {text: "int", correct: true},
-                        {text: "float", correct: false},
-                        {text: "理想型", correct: false}
-                    ],
-                    imgSrc : "img/html.png",
-                },
-                {
-                    question : "What type is 3.5?",
-                    choices: [
-                        {text: "int", correct: false},
-                        {text: "float", correct: true},
-                    ],
-                    imgSrc : "img/js.png",
-                }
-            ];
+        <!-- Content Start -->
+        <div id="imported-section"></div>
+        <script src="js/content.js"></script>
+        <script> 
+            let questions = [];
+            const chapter = 2;
+            fetch_content(chapter);
         </script>
         <div id="quiz-container"></div>
         <script src="js/quiz.js"></script>
-        <!-- Quiz End -->
+        <script>  fetch_quiz(chapter) </script>
+        <!-- Content End -->
 
-		<div id="disqus_thread"></div>
+
+        <div id="disqus_thread"></div>
 		<script>
 			/**
 			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -184,7 +154,6 @@
 				max-width: 800px; /* Set the maximum width for the Disqus thread */
 			}
 		</style>
- 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
@@ -260,6 +229,7 @@
             </div>
         </div>
         <!-- Footer End -->
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
