@@ -1,5 +1,3 @@
-
-
 contents = [
     'cin-cout',
     '<<>>',
@@ -11,7 +9,8 @@ contents = [
     'int-float',
     'if-else',
     'for-while',
-]
+];
+
 function fetch_content(chapter) {
     fetch('contents/' + contents[chapter - 1] + '.html')
         .then(response => response.text())
@@ -23,10 +22,12 @@ function fetch_content(chapter) {
 async function fetch_quiz(chapter) {
     try {
         const response = await fetch('contents/' + contents[chapter - 1] + '.json');
-        const data = await response.text();
-        questions = JSON.parse(data)["data"];
-        start.addEventListener("click",startQuiz);
+        const json_data = await response.text();
+        const data = JSON.parse(json_data)["data"];
+        $.getScript("js/game" + chapter + ".js", function(){
+            init(data);
+        });
     } catch (error) {
-        console.error('Error loading JSON:', error);
+        console.error('Error loading', error);
     }
 }
