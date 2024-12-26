@@ -75,3 +75,198 @@ body{
     bottom: 35px;
     right: 300px;
 }
+
+.game2-btn{
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    user-select: none;
+}
+.game2-btn:hover{
+    opacity: 0.8;
+}
+.game2-btn:active{
+    opacity: 0.6;
+}
+
+.game2-container{
+    background-color: blueviolet;
+    margin : 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+
+#game2-score{
+    background-color: orangered;
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    padding: 8px;
+}
+#game2-result-score{
+    background-color: #a92128;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+    padding: 25px;
+    border-radius:  15px 50px;
+}
+
+#game2-timer{
+    background-color: orangered;
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    padding: 8px;
+}
+
+.game2-intro-container{
+    margin : 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+#game2-rule{
+    width: 100%;
+    z-index: 20;
+}
+#game2-start{
+    position: absolute;
+    z-index: 21;
+    width: 100px;
+    bottom: 35px;
+    right: 300px;
+}
+
+.game1-container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    border: 1px solid #ccc;
+    margin : 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    font-size: 1rem;
+}
+.game1-left-panel, .game1-right-panel {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.game1-left-panel {
+    width: 60%;
+    border-right: 1px solid #ddd;
+    background-color: #eef;
+}
+.game1-right-panel {
+    background-color: #ffe;
+    width: 40%;
+}
+.game1-code-block {
+    background-color: #222;
+    color: #0f0;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1rem;
+}
+.game1-editable {
+    color: #ff0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    width: 45%;
+    display: inline;
+}
+#game1-run-program {
+    padding: 8px 16px;
+    margin: 10px 0px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#game1-run-program:hover {
+    background-color: #0056b3;
+}
+
+.game1-intro-container{
+    margin : 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+#game1-rule{
+    width: 100%;
+    z-index: 20;
+}
+#game1-start{
+    position: absolute;
+    z-index: 21;
+    width: 100px;
+    bottom: 35px;
+    right: 300px;
+}
+
+.game10-container {
+    background-color: #ffffff;
+    margin : 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    padding: 20px;
+}
+
+.game10-question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.game10-options {
+    margin: 10px 0;
+}
+
+.game10-result {
+    margin-top: 20px;
+}
+.game10-button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.game10-button:disabled {
+background-color: #ccc;
+}
+
+.game10-intro-container{
+    margin : 20px auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
+#game10-rule{
+    width: 100%;
+    z-index: 20;
+}
+#game10-start{
+    position: absolute;
+    z-index: 21;
+    width: 100px;
+    bottom: 35px;
+    right: 300px;
+}
