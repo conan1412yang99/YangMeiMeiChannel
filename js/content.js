@@ -10,6 +10,19 @@ contents = [
     'if-else',
     'for-while',
 ];
+game = [
+    'game1',
+    'game2',
+    'game3',
+    'game4',
+    'game5',
+    'game6',
+    'game7',
+    'game8',
+    'game9',
+    'game10'
+];
+
 
 function fetch_content(chapter) {
     fetch('contents/' + contents[chapter - 1] + '.html')
@@ -21,13 +34,14 @@ function fetch_content(chapter) {
 }
 async function fetch_quiz(chapter) {
     try {
-        const response = await fetch('contents/' + contents[chapter - 1] + '.json');
+        console.log(game[chapter - 1]);
+        const response = await fetch('contents/' + game[chapter - 1] + '.json');
         const json_data = await response.text();
         const data = JSON.parse(json_data)["data"];
-        $.getScript("js/game" + chapter + ".js", function(){
+        $.getScript("js/" + game[chapter - 1] + ".js", function(){
             init(data);
         });
     } catch (error) {
-        console.error('Error loading', error);
+        console.log('Error loading', error);
     }
 }
