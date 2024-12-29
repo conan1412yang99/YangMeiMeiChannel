@@ -32,6 +32,7 @@ class MultipleChoiceGame {
         this.nextButton.textContent = "下一題";
         this.nextButton.onclick = () => this.nextQuestion();
         this.nextButton.className = "game10-button";
+        this.nextButton.disabled = true;
 
         this.resultDiv = document.createElement("div");
         this.resultDiv.className = "game10-result";
@@ -49,6 +50,19 @@ class MultipleChoiceGame {
 
         this.selectedQuestions = this.getRandomQuestions();
         this.displayQuestion();
+
+        // Create and append audio elements
+        this.correctSound = document.createElement('audio');
+        this.correctSound.id = 'correct-sound';
+        this.correctSound.src = './img/correct.wav';
+        this.correctSound.preload = 'auto';
+        this.container.appendChild(this.correctSound);
+
+        this.wrongSound = document.createElement('audio');
+        this.wrongSound.id = 'wrong-sound';
+        this.wrongSound.src = './img/wrong.wav';
+        this.wrongSound.preload = 'auto';
+        this.container.appendChild(this.wrongSound);
     }
 
     getRandomQuestions() {
@@ -66,7 +80,15 @@ class MultipleChoiceGame {
                     <label><input type="radio" name="option" value="1"> ${question.options[1]}</label>
                 </div>
             `;
-            this.nextButton.disabled = false;
+            this.resultDiv.innerHTML = ''; // Clear previous result
+            this.nextButton.disabled = true; // Disable next button until an option is selected
+
+            // Add event listener to enable the next button when an option is selected
+            document.querySelectorAll('input[name="option"]').forEach(input => {
+                input.addEventListener('change', () => {
+                    this.nextButton.disabled = false;
+                });
+            });
         } else {
             this.showResult();
         }
@@ -76,24 +98,39 @@ class MultipleChoiceGame {
         const selectedOption = document.querySelector('input[name="option"]:checked');
         if (selectedOption) {
             const selectedValue = parseInt(selectedOption.value);
-            if (selectedValue === this.selectedQuestions[this.currentQuestionIndex].answer) {
+            const question = this.selectedQuestions[this.currentQuestionIndex];
+            if (selectedValue === question.answer) {
                 this.score += 20;
+                this.resultDiv.innerHTML = '<p class="correct">正確!</p>';
+                this.correctSound.play(); // Play correct sound
+            } else {
+                this.resultDiv.innerHTML = `<p class="wrong">錯誤! 正確答案是: ${question.options[question.answer]}</p>`;
+                this.wrongSound.play(); // Play wrong sound
             }
             this.currentQuestionIndex++;
-            this.displayQuestion();
+
+            this.nextButton.disabled = true; // Disable next button until the result is shown
+            setTimeout(() => {
+                this.displayQuestion(); // Display next question after a short delay
+            }, 2000); // Adjust the delay as needed (2000 ms = 2 seconds)
         } else {
             alert("請選擇答案!");
         }
     }
 
     showResult() {
+        this.questionContainer.style.display = 'none'; // Hide question container
+        this.nextButton.style.display = 'none'; // Hide next button
+
         const pass = this.score >= 60 ? "及格" : "不及格";
         this.resultDiv.innerHTML = `
-            <b>遊戲結束</b>
-            <p>你的分數: ${this.score}</p>
-            <p>你${pass}</p>
+            <div class="result-container">
+                <b>遊戲結束</b>
+                <p>你的分數: ${this.score}</p>
+                <p>你${pass}</p>
+            </div>
         `;
-        this.nextButton.style.display = 'none';
+        this.resultDiv.style.display = 'block'; // Ensure result div is displayed
     }
 }
 
