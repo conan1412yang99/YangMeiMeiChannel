@@ -37594,7 +37594,7 @@ A.kZ.prototype={
 P(a){var s=null
 return new A.du(B.j4,A.kh(A.acN(new A.hB(this.e,25,s),this.d,A.acO(s,s,this.c,s,s,s,s,s,s,s,s,s,B.j3,s,B.tH,s,s,s,s)),100,100),s)}}
 A.tD.prototype={
-aH(){return new A.J5(B.Ei,A.a([new A.en("skin",B.oV,"assets/draw-3.png"),new A.en("body",B.oW,"assets/draw-2.png"),new A.en("pants",B.oT,"assets/draw-1.png"),new A.en("feet",B.oU,"assets/draw-4.png")],t.Ss),B.p)}}
+aH(){return new A.J5(B.Ei,A.a([new A.en("變數A",B.oV,"assets/draw-3.png"),new A.en("變數B",B.oW,"assets/draw-2.png"),new A.en("變數C",B.oT,"assets/draw-1.png"),new A.en("變數D",B.oU,"assets/draw-4.png")],t.Ss),B.p)}}
 A.fP.prototype={
 D(){return"PaintColor."+this.b}}
 A.en.prototype={}
@@ -37636,7 +37636,7 @@ $0(){this.b.c=!0
 this.a.O4()},
 $S:0}
 A.a4y.prototype={
-$1(a){return new A.o5("The color for the "+this.a.a+" isn't correct.",null)},
+$1(a){return new A.o5(this.a.a+"的值不應該是這個喔",null)},
 $S:425}
 A.a4D.prototype={
 $1(a){return a.c},
@@ -37657,7 +37657,7 @@ A.nJ.prototype={
 P(a){return B.Fg}}
 A.nV.prototype={
 P(a){var s=null
-return A.Z3(A.zz(A.a8H(A.a([A.a9W("Instructions",A.ab1().$3$color$fontSize$fontWeight(B.j,62,B.bg)),A.kh(s,20,s),A.a9W("Assign the colors to the pengiun's body parts to complete the stage.",A.ab1().$3$color$fontSize$fontWeight(B.j,50,B.q)),A.kh(s,20,s),A.Tb(s,A.nO("assets/skip_button.jpg",B.Q,s,s,2,s),B.aU,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.UL(a),s,s,s)],t.F),B.bN,B.fl,B.bl),s,s))}}
+return A.Z3(A.zz(A.a8H(A.a([A.a9W("指示",A.ab1().$3$color$fontSize$fontWeight(B.j,62,B.bg)),A.kh(s,20,s),A.a9W("請賦予企鵝身上的變數正確的值",A.ab1().$3$color$fontSize$fontWeight(B.j,50,B.q)),A.kh(s,20,s),A.Tb(s,A.nO("assets/skip_button.jpg",B.Q,s,s,2,s),B.aU,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s,new A.UL(a),s,s,s)],t.F),B.bN,B.fl,B.bl),s,s))}}
 A.UL.prototype={
 $0(){A.a9z(this.a,"/game",t.X)},
 $S:0}
@@ -62903,11 +62903,11 @@ B.c3=new A.d(4294967556)
 B.zI=new A.o0(B.c3,2,"capsLock")
 B.bi=new A.lB(0,"any")
 B.ay=new A.lB(3,"all")
-B.zJ=new A.hB("2. Assign the magical variable.",38,null)
+B.zJ=new A.hB("2. 選擇要放進去的變數.",38,null)
 B.zK=new A.hB("OK",46,null)
 B.zL=new A.hB("Oops",50,null)
-B.zM=new A.hB("3. Paint the pengiun like this.",38,null)
-B.zN=new A.hB("1. Pick a color.",38,null)
+B.zM=new A.hB("3. 目標是讓每個變數裡存的顏色如下.",38,null)
+B.zN=new A.hB("1. 請選擇要放進變數裡的顏色.",38,null)
 B.b_=new A.jU(0,"opportunity")
 B.k=new A.jU(1,"prohibited")
 B.aJ=new A.jU(2,"mandatory")
