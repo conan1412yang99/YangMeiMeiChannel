@@ -1,95 +1,116 @@
-:root {
-    --primary: #FF6666; /* 粉色 */
-    --light: #FFF5F3; /* 浅粉色 */
-    --dark: #663366; /* 紫色 */
-    --accent: #FFCC99; /* 浅橙色 */
-}
-.btn {
-    font-weight: 500;
-    transition: .5s;
-    border-radius: 20px; /* 更圆润的按钮 */
+/* 全局樣式 */
+body {
+    font-family: 'Comic Neue', cursive, sans-serif;
+    background-color: #FFF3E0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-.btn.btn-primary {
-    color: #FFFFFF;
-    background-color: var(--primary);
-    border-color: var(--primary);
-}
-
-.btn.btn-primary:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
-    transform: scale(1.1); /* 悬停时放大 */
-}
+/* 可愛的導航列 */
 .navbar {
-    background-color: var(--accent) !important; /* 浅橙色背景 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFB6C1;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .navbar-nav .nav-link {
-    padding: 30px 15px;
-    color: var(--dark);
-    font-weight: 500;
-    font-family: 'Fredoka One', cursive; /* 可爱字体 */
-    transition: .3s;
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-    transform: scale(1.1); /* 悬停时放大 */
-}
-.header-carousel .owl-carousel-item {
-    background-color: rgba(255, 204, 153, 0.5); /* 浅橙色背景 */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-.header-carousel .owl-carousel-item h1 {
-    font-family: 'Fredoka One', cursive; /* 可爱字体 */
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+.nav-links li {
+    margin: 0 10px;
 }
 
-.header-carousel .owl-carousel-item p {
-    font-family: 'Comic Sans MS', cursive; /* 可爱字体 */
-    color: #FFFFFF;
-}
-.footer {
-    background-color: var(--dark) !important; /* 紫色背景 */
-}
-
-.footer .btn.btn-social {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    transition: .3s;
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #FF69B4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
-.footer .btn.btn-social:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
-    transform: scale(1.1); /* 悬停时放大 */
+.nav-links a:hover {
+    background-color: #FF1493;
 }
 
-.footer .btn.btn-link {
-    color: #FFFFFF;
-    transition: .3s;
+/* 標題區 */
+.hero {
+    background: url('../img/bg-clouds.png') no-repeat center;
+    background-size: cover;
+    padding: 80px 20px;
 }
 
-.footer .btn.btn-link:hover {
-    color: var(--primary) !important;
-    transform: scale(1.1); /* 悬停时放大 */
-}
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.hero h1 {
+    font-size: 40px;
+    color: #FF4081;
 }
 
-.btn:hover {
-    animation: bounce 0.5s ease-in-out; /* 按钮悬停时弹跳 */
+.hero p {
+    font-size: 20px;
+    color: #FF69B4;
 }
 
-.navbar .navbar-nav .nav-link:hover {
-    animation: bounce 0.5s ease-in-out; /* 导航栏悬停时弹跳 */
+/* 學習單元區 */
+.units {
+    padding: 50px 20px;
+}
+
+.units h2 {
+    font-size: 32px;
+    color: #FF4081;
+    margin-bottom: 20px;
+}
+
+.unit-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.unit-card {
+    background-color: #FFD700;
+    color: #6A1B9A;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.unit-card:hover {
+    background-color: #FFC107;
+    transform: scale(1.1);
+}
+
+/* 聯絡我們 */
+footer {
+    background-color: #FFB6C1;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer p {
+    font-size: 16px;
+    color: white;
 }
