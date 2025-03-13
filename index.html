@@ -14,8 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Sans+MS&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -27,280 +27,79 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- 自定义样式 -->
     <style>
-        /* 整体背景 */
         body {
-            background-color: #FFF5F3; /* 浅粉色背景 */
-            font-family: 'Comic Sans MS', cursive;
+            background-color: #FFF0F5;
+            background-image: url('img/cute-pattern.png'); /* 可以換成可愛的背景圖 */
+            background-size: cover;
+            font-family: 'Fredoka One', cursive, sans-serif;
         }
-
-        /* 导航栏样式 */
         .navbar {
-            background-color: #FFCC99 !important; /* 浅橙色 */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-
-        .navbar-brand h1 {
-            font-family: 'Fredoka One', cursive;
-            color: #663366 !important; /* 紫色 */
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        .navbar .nav-link {
-            font-family: 'Fredoka One', cursive;
-            color: #663366 !important; /* 紫色 */
-            font-size: 1.2rem;
-            margin: 0 10px;
+            background-color: #FFB6C1 !important;
+            border-radius: 15px;
             padding: 10px 20px;
-            border-radius: 20px;
-            background-color: #FF6666; /* 粉色 */
-            color: #FFFFFF !important;
-            transition: transform 0.3s ease, background-color 0.3s ease;
         }
-
-        .navbar .nav-link:hover {
-            background-color: #FF9966; /* 浅橙色 */
-            transform: scale(1.1); /* 悬停时放大 */
+        .navbar-brand h1 {
+            color: #FF69B4 !important;
         }
-
-        /* 轮播图样式 */
-        .header-carousel .owl-carousel-item {
-            position: relative;
+        .btn-primary {
+            background-color: #FF69B4;
+            border-color: #FF69B4;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
         }
-
-        .header-carousel .owl-carousel-item h1 {
-            font-family: 'Fredoka One', cursive;
-            font-size: 3rem;
-            color: #FFFFFF;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .btn-primary:hover {
+            background-color: #FF1493;
+            border-color: #FF1493;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(255, 105, 180, 0.4);
         }
-
-        .header-carousel .owl-carousel-item p {
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 1.5rem;
-            color: #FFFFFF;
-        }
-
-        .header-carousel .owl-carousel-item .btn {
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.2rem;
-            border-radius: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .header-carousel .owl-carousel-item .btn:hover {
-            transform: scale(1.1); /* 悬停时放大 */
-        }
-
-        /* 单元入口样式 */
-        .unit-section {
-            padding: 50px 0;
-            background-color: #FFFFFF;
-            text-align: center;
-        }
-
-        .unit-section h2 {
-            font-family: 'Fredoka One', cursive;
-            color: #663366;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        .unit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 0 20px;
-        }
-
-        .unit-card {
-            background-color: #FFCC99;
-            border-radius: 20px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .unit-card:hover {
-            transform: scale(1.1); /* 悬停时放大 */
-        }
-
-        .unit-card i {
-            font-size: 3rem;
-            color: #663366;
-            margin-bottom: 10px;
-        }
-
-        .unit-card h3 {
-            font-family: 'Fredoka One', cursive;
-            color: #663366;
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        /* 页脚样式 */
         .footer {
-            background-color: #663366 !important; /* 紫色 */
-            color: #FFFFFF;
-            padding: 50px 0;
-            text-align: center;
+            background-color: #FFB6C1 !important;
+            border-radius: 15px;
         }
-
-        .footer h3 {
-            font-family: 'Fredoka One', cursive;
-            color: #FFCC99 !important; /* 浅橙色 */
+        .footer h3, .footer a, .footer p {
+            color: #FFF !important;
         }
-
-        .footer p, .footer a {
-            font-family: 'Comic Sans MS', cursive;
-            color: #FFFFFF !important; /* 白色 */
-        }
-
-        .footer .btn-social {
-            background-color: #FF6666 !important; /* 粉色 */
-            border-color: #FF6666 !important;
-            transition: transform 0.3s ease;
-        }
-
-        .footer .btn-social:hover {
-            background-color: #FFCC99 !important; /* 浅橙色 */
-            border-color: #FFCC99 !important;
-            transform: scale(1.1); /* 悬停时放大 */
+        .header-carousel img {
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-        <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h1><i class="fa fa-book-reader me-3"></i>徉咩咩Channel</h1>
+                <h1 class="m-0"><i class="fa fa-book-reader me-3"></i>徉咩咩Channel</h1>
             </a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link active">主頁</a>
-                    <a href="about.html" class="nav-item nav-link">關於我</a>
-                    <a href="contact.html" class="nav-item nav-link">聯絡我</a>
-                </div>
-            </div>
         </nav>
-        <!-- Navbar End -->
-
-        <!-- Carousel Start -->
+        
         <div class="container-fluid p-0 mb-5">
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
                     <img class="img-fluid" src="img/1198137.jpg" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                        <div class="container">
-                            <div class="row justify-content-start">
-                                <div class="col-10 col-lg-8">
-                                    <h1 class="display-2 text-white animated slideInDown mb-4">歡迎來到徉咩咩Channel!</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">在這裡你可以學到很多有趣的程式唷!</p>
-                                    <a href="#units" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">開始學習</a>
-                                </div>
-                            </div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2); border-radius: 20px;">
+                        <div class="container text-center">
+                            <h1 class="display-2 text-white animated slideInDown mb-4">歡迎來到徉咩咩Channel!</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">在這裡你可以學到很多有趣的程式唷!</p>
+                            <a href="CH1.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">開始學習</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
-
-        <!-- 单元入口 -->
-        <div id="units" class="unit-section">
-            <h2>教學單元</h2>
-            <div class="unit-grid">
-                <a href="CH1.html" class="unit-card">
-                    <i class="fa fa-star"></i>
-                    <h3>第一章</h3>
-                </a>
-                <a href="CH2.html" class="unit-card">
-                    <i class="fa fa-heart"></i>
-                    <h3>第二章</h3>
-                </a>
-                <a href="CH3.html" class="unit-card">
-                    <i class="fa fa-smile"></i>
-                    <h3>第三章</h3>
-                </a>
-                <a href="CH4.html" class="unit-card">
-                    <i class="fa fa-cloud"></i>
-                    <h3>第四章</h3>
-                </a>
-                <a href="CH5.html" class="unit-card">
-                    <i class="fa fa-sun"></i>
-                    <h3>第五章</h3>
-                </a>
-                <a href="CH6.html" class="unit-card">
-                    <i class="fa fa-moon"></i>
-                    <h3>第六章</h3>
-                </a>
-                <a href="CH7.html" class="unit-card">
-                    <i class="fa fa-star"></i>
-                    <h3>第七章</h3>
-                </a>
-                <a href="CH8.html" class="unit-card">
-                    <i class="fa fa-heart"></i>
-                    <h3>第八章</h3>
-                </a>
-                <a href="CH9.html" class="unit-card">
-                    <i class="fa fa-smile"></i>
-                    <h3>第九章</h3>
-                </a>
-                <a href="CH10.html" class="unit-card">
-                    <i class="fa fa-cloud"></i>
-                    <h3>第十章</h3>
-                </a>
+        
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <h3 class="text-white mb-4">聯絡我們</h3>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>conan1412yang99@gmail.com</p>
             </div>
         </div>
-
-        <!-- Footer Start -->
-        <div class="footer">
-            <div class="container">
-                <h3>徉咩咩Channel</h3>
-                <p>希望來自各個地方的小朋友都會喜歡C++!</p>
-                <p>也希望徉徉姐姐的影片可以幫助到大家!</p>
-                <div class="d-flex justify-content-center">
-                    <a class="btn btn-social" href="https://www.instagram.com/nthu_yangliu/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-social" href="https://www.facebook.com/nthu.yangliu" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-social" href="https://www.youtube.com/@yangliu8494" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>
