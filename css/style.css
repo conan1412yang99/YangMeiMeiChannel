@@ -1,201 +1,503 @@
-/********** 全局样式 **********/
-body {
-    background-color: #FFF5F3; /* 浅粉色背景 */
-    font-family: 'Comic Sans MS', cursive;
-    margin: 0;
-    padding: 0;
-    color: #663366; /* 紫色文字 */
+/********** Template CSS **********/
+:root {
+    --primary: #FE5D37;
+    --light: #FFF5F3;
+    --dark: #103741;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fredoka One', cursive;
-    color: #663366; /* 紫色标题 */
-}
-
-a {
-    text-decoration: none;
-    color: #663366; /* 紫色链接 */
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #FF6666; /* 粉色悬停 */
-}
-
-/********** 导航栏样式 **********/
-.navbar {
-    background-color: #FFCC99 !important; /* 浅橙色 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-}
-
-.navbar-brand h1 {
-    font-family: 'Fredoka One', cursive;
-    color: #663366 !important; /* 紫色 */
-    font-size: 2rem;
-    margin: 0;
-}
-
-.navbar .nav-link {
-    font-family: 'Fredoka One', cursive;
-    color: #FFFFFF !important; /* 白色 */
-    font-size: 1.2rem;
-    margin: 0 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #FF6666; /* 粉色 */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-    background-color: #FF9966; /* 浅橙色 */
-    transform: scale(1.1); /* 悬停时放大 */
-}
-
-/********** 轮播图样式 **********/
-.header-carousel .owl-carousel-item {
-    position: relative;
-}
-
-.header-carousel .owl-carousel-item img {
-    width: 100%;
-    height: auto;
-}
-
-.header-carousel .owl-carousel-item h1 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 3rem;
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.header-carousel .owl-carousel-item p {
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 1.5rem;
-    color: #FFFFFF;
-}
-
-.header-carousel .owl-carousel-item .btn {
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
-.header-carousel .owl-carousel-item .btn:hover {
-    transform: scale(1.1); /* 悬停时放大 */
-}
-
-/********** 单元入口样式 **********/
-.unit-section {
-    padding: 50px 0;
-    background-color: #FFFFFF;
-    text-align: center;
-}
-
-.unit-section h2 {
-    font-family: 'Fredoka One', cursive;
-    color: #663366;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.unit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-}
-
-.unit-card {
-    background-color: #FFCC99; /* 浅橙色 */
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.unit-card:hover {
-    transform: scale(1.1); /* 悬停时放大 */
-}
-
-.unit-card i {
-    font-size: 3rem;
-    color: #663366; /* 紫色图标 */
-    margin-bottom: 10px;
-}
-
-.unit-card h3 {
-    font-family: 'Fredoka One', cursive;
-    color: #663366; /* 紫色文字 */
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-/********** 页脚样式 **********/
-.footer {
-    background-color: #663366 !important; /* 紫色 */
-    color: #FFFFFF;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.footer h3 {
-    font-family: 'Fredoka One', cursive;
-    color: #FFCC99 !important; /* 浅橙色 */
-}
-
-.footer p, .footer a {
-    font-family: 'Comic Sans MS', cursive;
-    color: #FFFFFF !important; /* 白色 */
-}
-
-.footer .btn-social {
-    background-color: #FF6666 !important; /* 粉色 */
-    border-color: #FF6666 !important;
-    transition: transform 0.3s ease;
-}
-
-.footer .btn-social:hover {
-    background-color: #FFCC99 !important; /* 浅橙色 */
-    border-color: #FFCC99 !important;
-    transform: scale(1.1); /* 悬停时放大 */
-}
-
-/********** 返回顶部按钮 **********/
 .back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #FF6666; /* 粉色 */
-    border-color: #FF6666;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary {
     color: #FFFFFF;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
+    font-weight: normal;
+    border-radius: 50px;
 }
 
-.back-to-top:hover {
-    background-color: #FFCC99; /* 浅橙色 */
-    border-color: #FFCC99;
-    transform: scale(1.1); /* 悬停时放大 */
+
+/*** Heading ***/
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-family: 'Lobster Two', cursive;
+    font-weight: 700;
 }
 
-/********** 动画效果 **********/
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
+h5,
+h6,
+.h5,
+.h6 {
+    font-weight: 600;
+}
+
+.font-secondary {
+    font-family: 'Lobster Two', cursive;
+}
+
+
+/*** Navbar ***/
+.navbar .navbar-nav .nav-link {
+    padding: 30px 15px;
+    color: var(--dark);
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
     }
-    50% {
-        transform: translateY(-10px);
+
+    .navbar .navbar-nav {
+        margin-top: 15px;
+        border-top: 1px solid #EEEEEE;
     }
 }
 
-.btn:hover, .nav-link:hover, .unit-card:hover, .btn-social:hover {
-    animation: bounce 0.5s ease-in-out; /* 悬停时弹跳效果 */
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: calc(100% - 15px);
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.header-carousel::before,
+.header-carousel::after,
+.page-header::before,
+.page-header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-header-top.png) center center repeat-x;
+    z-index: 1;
+}
+
+.header-carousel::after,
+.page-header::after {
+    height: 19px;
+    top: auto;
+    bottom: 0;
+    background: url(../img/bg-header-bottom.png) center center repeat-x;
+}
+
+@media (max-width: 768px) {
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header-carousel .owl-carousel-item p {
+        font-size: 16px !important;
+        font-weight: 400 !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, .5);
+}
+
+
+/*** Facility ***/
+.facility-item .facility-icon {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facility-item .facility-icon::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .9);
+    transition: .5s;
+    z-index: 1;
+}
+
+.facility-item .facility-icon span {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.facility-item .facility-icon span:last-child {
+    left: auto;
+    right: 0;
+}
+
+.facility-item .facility-icon i {
+    position: relative;
+    z-index: 2;
+}
+
+.facility-item .facility-text {
+    position: relative;
+    min-height: 250px;
+    padding: 30px;
+    border-radius: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.facility-item .facility-text::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .9);
+    transition: .5s;
+    z-index: 1;
+}
+
+.facility-item .facility-text * {
+    position: relative;
+    z-index: 2;
+}
+
+.facility-item:hover .facility-icon::before,
+.facility-item:hover .facility-text::before {
+    background: transparent;
+}
+
+.facility-item * {
+    transition: .5s;
+}
+
+.facility-item:hover * {
+    color: #FFFFFF !important;
+}
+
+
+/*** About ***/
+.about-img img {
+    transition: .5s;
+}
+
+.about-img img:hover {
+    background: var(--primary) !important;
+}
+
+
+/*** Classes ***/
+.classes-item {
+    transition: .5s;
+}
+
+.classes-item:hover {
+    margin-top: -10px;
+}
+
+
+/*** Team ***/
+.team-item .team-text {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 17px solid var(--light);
+    border-radius: 250px;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    border-color: var(--primary);
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .testimonial-carousel {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.testimonial-carousel .testimonial-item .border {
+    border: 1px dashed rgba(0, 185, 142, .3) !important;
+}
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 45px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--dark);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 45px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary) !important;
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .form-control {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: #FFFFFF;
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .copyright a:hover,
+.footer .footer-menu a:hover {
+    color: var(--primary) !important;
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
 }
