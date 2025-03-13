@@ -4,17 +4,14 @@
     // Initiate the wowjs
     new WOW().init();
 
-
     // Spinner
-    var spinner = function () {
+    $(window).on('load', function () {
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
-        }, 1);
-    };
-    spinner();
-
+        }, 1000); // 延迟 1 秒
+    });
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -24,8 +21,7 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -39,7 +35,6 @@
         return false;
     });
 
-
     // Header carousel
     $(".header-carousel").owlCarousel({
         autoplay: true,
@@ -47,13 +42,12 @@
         items: 1,
         dots: true,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
-
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -62,20 +56,19 @@
         margin: 24,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            992:{
-                items:2
+            992: {
+                items: 2
             }
         }
     });
-    
-})(jQuery);
 
+})(jQuery);
