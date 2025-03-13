@@ -186,8 +186,8 @@ a:hover {
     transform: scale(1.1); /* 悬停时放大 */
 }
 
-/* /********** 动画效果 **********/
-@keyframes bounce {
+ /********** 动画效果 **********/
+/*@keyframes bounce {
     0%, 100% {
         transform: translateY(0);
     }
