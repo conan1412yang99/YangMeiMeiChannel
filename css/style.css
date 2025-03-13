@@ -186,7 +186,7 @@ a:hover {
     transform: scale(1.1); /* 悬停时放大 */
 }
 
-/********** 动画效果 **********/
+/* /********** 动画效果 **********/
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -198,4 +198,4 @@ a:hover {
 
 .btn:hover, .nav-link:hover, .unit-card:hover, .btn-social:hover {
     animation: bounce 0.5s ease-in-out; /* 悬停时弹跳效果 */
-}
+} */
