@@ -7,6 +7,20 @@ body {
     color: #663366; /* 紫色文字 */
 }
 
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka One', cursive;
     color: #663366; /* 紫色标题 */
